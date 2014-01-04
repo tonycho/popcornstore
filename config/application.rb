@@ -8,6 +8,7 @@ Bundler.require(:default, Rails.env)
 
 module Store
   class Application < Rails::Application
+    config.assets.enabled = true
 
     config.to_prepare do
       # Load application's model / class decorators
