@@ -1,0 +1,26 @@
+- content_for :subheader do
+  = render 'slider'
+-##welcome-message
+-#  .container
+-#    %h1
+-#      Welcome to our amazing store!
+-#      %br/
+-#      Choose
+-#      %a{href: "/products"} anything
+-#      you wish, we’ll ship it
+-#      %a{href: "/products"} anywhere!
+.container
+  - if @featured_products
+    #featured-products.row
+      %h3 Featured Products
+      %hr/
+      %ul.carousel
+        - @featured_products.each do |product|
+          = render 'product', :product => product
+  -#- if @latest_products
+  -#  #latest-products.row
+  -#    %h3 Latest Products
+  -#    %hr/
+  -#    %ul.carousel
+  -#      - @latest_products.sort_by{ |product| product.created_at }.reverse.each do |product|
+  -#        = render 'product', :product => product
