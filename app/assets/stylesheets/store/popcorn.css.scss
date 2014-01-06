@@ -1,4 +1,4 @@
-body.one-col {
+body.one-col, body.two-col {
   border-top-width:0px;
   font-family: 'Courier New',Courier,Monaco;
 
@@ -8,6 +8,10 @@ body.one-col {
 
   #header {
     margin-bottom:0px;
+  }
+
+  nav#breadcrumbs {
+
   }
 
   .open-menu {
