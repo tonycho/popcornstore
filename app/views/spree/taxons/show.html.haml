@@ -1,16 +1,9 @@
 %h1= accurate_title
-- content_for :sidebar do
-  %div{"data-hook" => "taxon_sidebar_navigation"}
-    = render :partial => "spree/shared/taxonomies"
-    = render(:partial => "spree/shared/filters") if @taxon.children.empty?
 
-- if @taxon.children.inspect
-  %ul
-    - @taxon.children.each do |taxon_children|
-      %li
-        = taxon_children.name
-
-%div{"data-hook" => "taxon_products"}
-  = render :partial => "spree/shared/products", :locals => {:products => @products, :taxon => @taxon}
+- if @taxon.children.blank?
+  %div{"data-hook" => "taxon_products"}
+    = render :partial => "spree/shared/products", :locals => {:products => @products, :taxon => @taxon}
+- else
+  = taxons_tree(@taxon, @taxon, Spree::Config[:max_level_in_taxons_menu] || 1)
 -#%div{"data-hook" => "taxon_children"}
 -#  = render :partial => "taxon", :collection => @taxon.children
