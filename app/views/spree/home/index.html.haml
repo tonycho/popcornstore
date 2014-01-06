@@ -9,14 +9,14 @@
 -#      %a{href: "/products"} anything
 -#      you wish, we’ll ship it
 -#      %a{href: "/products"} anywhere!
-.container
-  - if @featured_products
-    #featured-products.row
-      %h3 Featured Products
-      %hr/
-      %ul.carousel
-        - @featured_products.each do |product|
-          = render 'product', :product => product
+-#.container
+  -#- if @featured_products
+  -#  #featured-products.row
+  -#    %h3 Featured Products
+  -#    %hr/
+  -#    %ul.carousel
+  -#      - @featured_products.each do |product|
+  -#        = render 'product', :product => product
   -#- if @latest_products
   -#  #latest-products.row
   -#    %h3 Latest Products
