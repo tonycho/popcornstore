@@ -2,15 +2,58 @@ body.one-col, body.two-col {
   border-top-width:0px;
   font-family: 'Courier New',Courier,Monaco;
 
+  a {
+      color: #333;
+      text-decoration: none;
+  }
+  a:hover {
+    color:#000;
+  }
+
+  #subheader {
+    display:none;
+    background:none;
+    border-bottom: 0px;
+    border-top: 0px;
+    box-shadow: none;
+    color: #000;
+
+    .subheader-wrapper{
+      padding:0px 0px 0px 5px;
+
+      h1 {
+        color:#000;
+        font-size:1.0em;
+      }
+    }
+  }
   .container {
     width: 100%;
   }
 
+  #wrapper {
+      margin-top: 0px;
+  }
+
   #header {
     margin-bottom:0px;
+    //border-bottom: solid 1px #666;
   }
 
   nav#breadcrumbs {
+    width:100%;
+    margin-top:0px;
+    border-color:#666;
+    color:#666;
+    ul li {
+      a {
+        color: #666;
+      }
+
+      a:hover {
+        color:#000;
+      }
+    }
 
   }
 
@@ -39,8 +82,33 @@ body.one-col, body.two-col {
     }
   }
 
-  .container .one.column, .container .one.columns, .container .two.columns, .container .three.columns, .container .four.columns, .container .five.columns, .container .six.columns, .container .seven.columns, .container .eight.columns, .container .nine.columns, .container .ten.columns, .container .eleven.columns, .container .twelve.columns, .container .thirteen.columns, .container .fourteen.columns, .container .fifteen.columns, .container .sixteen.columns, .container .one-third.column, .container .two-thirds.column {
+  .container .one.column, .container .one.columns, .container .two.columns, .container .three.columns, .container .four.columns, .container .five.columns, .container .six.columns, .container .seven.columns, .container .eight.columns, .container .nine.columns, .container .ten.columns, .container .eleven.columns, .container .twelve.columns, .container .thirteen.columns, .container .fourteen.columns, .container .fifteen.columns, .container .one-third.column, .container .two-thirds.column {
       width: auto;
+  }
+
+  .container .sixteen.columns {
+    width:100%;
+  }
+
+  .taxonomy-root {
+    display:none;
+  }
+
+  ul.taxons-list {
+    list-style: none outside none;
+    padding-left: 0;
+
+    li {
+      border:solid 1px #ccc;
+      margin:6px;
+      padding:5px;
+      text-align:left;
+    }
+  }
+
+  .product-image a {
+    border-radius:0px;
+    border-width:0px;
   }
 }
 
