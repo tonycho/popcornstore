@@ -116,6 +116,9 @@ body.one-col, body.two-col {
       margin:0px;
       padding:5px;
       text-align:left;
+      a {
+        font-size:14px !important;
+      }
     }
     li:first-child{
       border-top-width:0px;
