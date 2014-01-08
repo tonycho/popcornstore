@@ -17,6 +17,10 @@ body.one-col, body.two-col {
     color:#000;
   }
 
+  #nav-bar {
+    display:none;
+  }
+
   #subheader {
     display:none;
     background:none;
@@ -177,7 +181,7 @@ body.one-col, body.two-col {
 
     ul {
       list-style-type: none;
-      padding-top:20px;
+      padding-top:0px;
 
       li {
         display:inline;
