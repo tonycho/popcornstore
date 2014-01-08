@@ -1,9 +1,16 @@
 body.one-col, body.two-col {
   border-top-width:0px;
   font-family: 'Courier New',Courier,Monaco;
+  color:#222;
+  margin:10px;
+
+  h1 {
+    font-size: inherit;
+    text-align: left;
+  }
 
   a {
-      color: #333;
+      color: #222;
       text-decoration: none;
   }
   a:hover {
@@ -97,18 +104,86 @@ body.one-col, body.two-col {
   ul.taxons-list {
     list-style: none outside none;
     padding-left: 0;
+    box-shadow: 0 2px 4px 0 #CCCCCC;
 
     li {
-      border:solid 1px #ccc;
-      margin:6px;
+      border-top:solid 1px #ccc;
+      border-bottom-width:0px;
+      margin:0px;
       padding:5px;
       text-align:left;
     }
+    li:first-child{
+      border-top-width:0px;
+    }
   }
 
-  .product-image a {
-    border-radius:0px;
-    border-width:0px;
+  ul#products {
+    li.product-row {
+      width:100%;
+      box-shadow: 0 2px 4px 0 #CCCCCC;
+    }
+
+    li {
+      text-align: left;
+      border:solid 1px #cc;
+
+      a.info {
+        color:#000;
+        margin-right:5px;
+        border-width:0px;
+      }
+      .price {
+        margin-top:0px;
+        font-size: inherit;
+        color:#333;
+      }
+    }
+
+    .product-image {
+      float:left;
+      margin:5px;
+      border:solid 1px #ccc;
+
+      a {
+        border-radius:0px;
+        border-width:0px;
+        padding:5px;
+
+        img {
+          width:50px;
+          height:50px;
+          float:left;
+        }
+      }
+    }
+  }
+
+  ul#products [data-hook="products_list_item"] {
+    margin: 0;
+    width: 100% !important;
+    border-top:solid 1px #ccc;
+    border-left:solid 1px #ccc;
+    border-right:solid 1px #ccc;
+  }
+
+  ul#products li.product-row:last-child {
+    border-bottom:solid 1px #ccc;
+  }
+
+  footer {
+    text-align:center;
+    margin:0px auto;
+
+    ul {
+      list-style-type: none;
+      padding-top:20px;
+
+      li {
+        display:inline;
+        padding:10px 10px;
+      }
+    }
   }
 }
 
