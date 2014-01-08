@@ -112,6 +112,8 @@ body.one-col, body.two-col {
 
     li {
       border-top:solid 1px #ccc;
+      border-left:solid 1px #ccc;
+      border-right:solid 1px #ccc;
       border-bottom-width:0px;
       margin:0px;
       padding:5px;
@@ -119,9 +121,6 @@ body.one-col, body.two-col {
       a {
         font-size:14px !important;
       }
-    }
-    li:first-child{
-      border-top-width:0px;
     }
   }
 
