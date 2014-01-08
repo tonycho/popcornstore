@@ -185,5 +185,47 @@ body.one-col, body.two-col {
       }
     }
   }
+
+  #product-images #main-image {
+    border-color:#ccc !important;
+  }
+  #main-image, #main-image img {
+    border-radius: 0px;
+    width:100%;
+  }
+  input[type="button"], input[type="submit"], button, .button, a.button, input[type="number"], input[type="text"], input[type="email"], input[type="password"], input[type="tel"], input[type="search"], textarea {
+    border-radius: 0px;
+      border-width: 3px;
+      box-shadow: none;
+      padding: 10px 20px;
+      text-transform: uppercase;
+      transition-duration: 0.3s;
+  }
+  input[type="button"], button {
+    background-color:#222;
+    border-color:#222;
+  }
+
+  #cart-form {
+    [data-hook=product_price] {
+      width:100%;
+      border-bottom: 2px solid #ccc;
+    }
+    #product-price .price {
+      color: #CC0000;
+      font-size: 14px !important;
+    }
+    .add-to-cart {
+      float: right;
+      input[type="number"] {
+        display:none;
+      }
+    }
+  }
+
+  .product-section-title {
+    color:#222;
+    border-bottom:solid 1px #ccc;
+  }
 }
 
