@@ -279,6 +279,11 @@ body.one-col, body.two-col {
   .product-section-title {
     margin:10px 0px 0px;
   }
+
+  table tbody tr.alt, table tbody tr.odd, table tfoot tr.alt, table tfoot tr.odd {
+      background-color: #fefefe;
+  }
+
   #product-properties {
     tr.odd {
       background-color: #fefefe;
@@ -304,6 +309,20 @@ body.one-col, body.two-col {
   }
   .gray{
     color:#fff;
+  }
+
+  #order_coupon_code {
+    display:none;
+  }
+
+  #update-button {
+    display:none;
+  }
+
+  #clear_cart_link {
+    button, .or {
+      display: none;
+    }
   }
 }
 
