@@ -4,6 +4,9 @@ body.one-col, body.two-col {
   color:#222;
   margin:10px;
 
+  #content {
+      text-align: left;
+  }
   h1 {
     font-size: inherit;
     text-align: left;
@@ -94,7 +97,7 @@ body.one-col, body.two-col {
   }
 
   .container .one.column, .container .one.columns, .container .two.columns, .container .three.columns, .container .four.columns, .container .five.columns, .container .six.columns, .container .seven.columns, .container .eight.columns, .container .nine.columns, .container .ten.columns, .container .eleven.columns, .container .twelve.columns, .container .thirteen.columns, .container .fourteen.columns, .container .fifteen.columns, .container .one-third.column, .container .two-thirds.column {
-      width: auto;
+      width: 100%;
   }
 
   .container .sixteen.columns {
@@ -192,13 +195,23 @@ body.one-col, body.two-col {
     }
   }
 
-  #product-images #main-image {
-    border-color:#ccc !important;
+  #product-images {
+    width:100%;
+
+    #main-image {
+      border-color:#ccc !important;
+      border-width:0px;
+      width:auto;
+      border: 1px solid #ccc !important;
+    }
+  }
+  #product-description {
+    margin-top:0px;
   }
   #main-image, #main-image img {
     border-radius: 0px;
-    width:100%;
   }
+
   input[type="button"], input[type="submit"], button, .button, a.button, input[type="number"], input[type="text"], input[type="email"], input[type="password"], input[type="tel"], input[type="search"], textarea {
     border-radius: 0px;
       border-width: 3px;
@@ -215,7 +228,7 @@ body.one-col, body.two-col {
   #cart-form {
     [data-hook=product_price] {
       width:100%;
-      border-bottom: 2px solid #ccc;
+      border-bottom: 0px solid #ccc;
     }
     #product-price .price {
       color: #CC0000;
@@ -232,6 +245,23 @@ body.one-col, body.two-col {
   .product-section-title {
     color:#222;
     border-bottom:solid 1px #ccc;
+  }
+
+  [data-hook=product_taxons] {
+    ul {
+      list-style-type: none;
+    }
+  }
+  .product-section-title {
+    margin:10px 0px 0px;
+  }
+  #product-properties {
+    tr.odd {
+      background-color: #fefefe;
+    }
+    tr td strong {
+      color:#222;
+    }
   }
 }
 
