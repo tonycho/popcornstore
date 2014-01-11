@@ -59,3 +59,5 @@ end
 gem 'spree_fancy', :github => 'spree/spree_fancy', :branch => '2-1-stable'
 
 gem 'haml-rails'
+
+gem 'spree_heroku', group: [:production]
