@@ -10,6 +10,14 @@ Spree.config do |config|
   # Uncomment to override the default site name.
   # config.site_name = "Spree Demo Site"
   #config.allow_ssl_in_production = false
+  config.use_s3 = true
+  config.s3_bucket = 'popcornstore'
+  config.s3_access_key = "AKIAISXIDAF2QN4IZEOA"
+  config.s3_secret = "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"
 end
 
 Spree.user_class = "Spree::User"
+
+Paperclip.interpolates(:s3_eu_url) do |attachment, style|
+  "#{attachment.s3_protocol}://#{Spree::Config[:s3_host_alias]}/#{attachment.bucket_name}/#{attachment.path(style).gsub(%r{^/},"")}"
+end
