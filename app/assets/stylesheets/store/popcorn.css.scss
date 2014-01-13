@@ -435,10 +435,13 @@ body.one-col, body.two-col {
 
   #shipping_method {
     .stock-shipping-method-title {
-      background-color: #CCCCCC;
-      color: $font_color;
-      font-size: 10px;
-      padding: 5px;
+      color: $font_color !important;
+      font-size:14px;
+      text-transform: uppercase;
+      width:100% !important;
+      background-color:inherit;
+      text-align:left;
+      border-bottom:solid 1px $border_color;
     }
 
     .shipping-methods .shipping-method {
@@ -540,6 +543,44 @@ body.one-col, body.two-col {
 
   [data-hook="shipping_fieldset_wrapper"] {
     display: none;
+  }
+
+  .payment-method-selector.ui-buttonset {
+      padding-top: 10px;
+      text-align: left;
+  }
+
+  label.ui-button {
+      background-image: none;
+      border-radius: 0px;
+      border-width: 1px;
+      color: $font_color;
+      font-size: 12px;
+      margin-bottom: 10px;
+      margin-right: 0px !important;
+      transition-duration: 0.3s;
+  }
+
+  label.ui-button.ui-state-active{
+    background-color:#222222;
+    color:#fff;
+  }
+
+  #checkout-summary tr[data-hook="order_total"] td {
+    border-color:$border_color;
+  }
+
+  .steps-data .four.columns {
+    width:50%;
+  }
+
+  #order p[data-hook="links"] {
+    text-align: right;
+  }
+
+  input[type="submit"], input[type="button"], input[type="reset"], button, a.button {
+    background-color:$font_color;
+    color:#fff;
   }
 }
 
