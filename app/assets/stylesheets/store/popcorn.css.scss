@@ -43,10 +43,6 @@ body.one-col, body.two-col {
     color:#000;
   }
 
-  #nav-bar {
-    display:none;
-  }
-
   #subheader {
     display:none;
     background:none;
@@ -118,8 +114,27 @@ body.one-col, body.two-col {
     }
   }
 
-  .container .one.column, .container .one.columns, .container .two.columns, .container .three.columns, .container .four.columns, .container .five.columns, .container .six.columns, .container .seven.columns, .container .eight.columns, .container .nine.columns, .container .ten.columns, .container .eleven.columns, .container .twelve.columns, .container .thirteen.columns, .container .fourteen.columns, .container .fifteen.columns, .container .one-third.column, .container .two-thirds.column {
+  .container .one.column,
+  .container .one.columns,
+  .container .two.columns,
+  .container .three.columns,
+  .container .six.columns,
+  .container .seven.columns,
+  .container .eight.columns,
+  .container .nine.columns,
+  .container .ten.columns,
+  .container .eleven.columns,
+  .container .twelve.columns,
+  .container .thirteen.columns,
+  .container .fourteen.columns,
+  .container .fifteen.columns,
+  .container .one-third.column,
+  .container .two-thirds.column {
       width: 100%;
+  }
+
+  .container .four.columns {
+    width: auto;
   }
 
   .container .sixteen.columns {
@@ -353,10 +368,12 @@ body.one-col, body.two-col {
     dipslay:none;
   }
 
-  //nav#top-nav-bar {
-  //  margin-top: 3px;
-  //  margin-right:10px;
-  //}
+  #nav-bar {
+    text-align:right;
+  }
+  nav#top-nav-bar {
+    margin-top: 3px;
+  }
 
   [data-hook="order_summary"] {
     td:last-child {
