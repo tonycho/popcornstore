@@ -280,6 +280,11 @@ body.one-col, body.two-col {
     border-radius: 0px;
   }
 
+  #cart-form .add-to-cart #add-to-cart-button {
+    font-size: 18px;
+    margin-left: 5px;
+    padding: 10px 10px;
+  }
   input[type="button"], input[type="submit"], button, .button, a.button, input[type="number"], input[type="text"], input[type="email"], input[type="password"], input[type="tel"], input[type="search"], textarea {
     border-radius: 0px;
     border-width: 1px;
