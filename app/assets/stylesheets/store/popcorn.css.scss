@@ -1,7 +1,10 @@
+$font_color: #222;
+$border_color: '#ccc';
+
 body.one-col, body.two-col {
   border-top-width:0px;
   font-family: 'Courier New',Courier,Monaco;
-  color:#222;
+  color:$font_color;
   margin:0px 10px;
   line-height:20px;
 
@@ -14,7 +17,7 @@ body.one-col, body.two-col {
   }
   [data-hook="cart_items_headers"] {
     background-color:#ccc;
-    color:#222;
+    color:$font_color;
     font-size:10px;
     thead {
       th {
@@ -37,11 +40,11 @@ body.one-col, body.two-col {
   }
 
   a {
-      color: #222;
+      color: $font_color;
       text-decoration: none;
   }
   a:hover {
-    color:#000;
+    color:#000 !important;
   }
 
   #subheader {
@@ -220,14 +223,14 @@ body.one-col, body.two-col {
   }
 
   footer {
-    width: 96%;
-    background-color: #FFFFFF;
-    bottom: 0;
-    margin: 0;
-    overflow: hidden;
-    position: absolute;
+    //width: 96%;
+    //background-color: #FFFFFF;
+    //bottom: 0;
+    //margin: 0;
+    //overflow: hidden;
+    //position: absolute;
+    //border-top: 1px solid #CCCCCC;
     text-align:center;
-    border-top: 1px solid #CCCCCC;
 
     ul {
       list-style-type: none;
@@ -269,7 +272,7 @@ body.one-col, body.two-col {
 
   #account, #guest_checkout, #checkout {
     h3 {
-      color:#222;
+      color:$font_color;
       font-size:14px;
     }
     input[type="number"], input[type="text"], input[type="email"], input[type="password"], input[type="tel"], input[type="search"], textarea {
@@ -278,7 +281,7 @@ body.one-col, body.two-col {
     }
     input[type="button"], input[type="submit"], button, .button, a.button {
       width:100%;
-      background-color:#222;
+      background-color:$font_color;
       color:#FFFFFF;
     }
   }
@@ -288,15 +291,15 @@ body.one-col, body.two-col {
     padding: 0;
     legend {
       text-align:left !important;
-      color:#222;
+      color:$font_color;
       font-size:14px;
     }
   }
 
 
   input[type="button"], button {
-    background-color:#222;
-    border-color:#222;
+    background-color:$font_color;
+    border-color:$font_color;
   }
 
   #cart-form {
@@ -317,7 +320,7 @@ body.one-col, body.two-col {
   }
 
   .product-section-title {
-    color:#222;
+    color:$font_color;
     border-bottom:solid 1px #ccc;
   }
 
@@ -339,7 +342,7 @@ body.one-col, body.two-col {
       background-color: #fefefe;
     }
     tr td strong {
-      color:#222;
+      color:$font_color;
     }
   }
 
@@ -347,7 +350,7 @@ body.one-col, body.two-col {
     text-align:right;
   }
   .cart-item-total, .order-total {
-    color:#222 !important;
+    color:$font_color !important;
     font-size:12px !important;
   }
 
@@ -385,12 +388,12 @@ body.one-col, body.two-col {
   [data-hook="order_summary"] {
     td:last-child {
       text-align:right;
-      color:#222;
+      color:$font_color;
     }
   }
 
   span.price, #checkout-summary table tr[data-hook="item_total"] td:last-child strong, #checkout-summary table #summary-order-total, #order_details td.price span, #order_details td.total span, #order_summary td.price span, #order_summary td.total span, table#cart-detail tbody#line_items tr td[data-hook="cart_item_price"], table#cart-detail tbody#line_items tr td[data-hook="cart_item_total"], div[data-hook="inside_cart_form"] #subtotal span.order-total {
-    color: #222;
+    color: $font_color;
     font-weight: bold;
   }
 
@@ -399,7 +402,7 @@ body.one-col, body.two-col {
 
     tr th {
       background-color: #CCCCCC;
-      color: #222222;
+      color: $font_color;
       font-size: 10px;
     }
   }
@@ -407,7 +410,7 @@ body.one-col, body.two-col {
   #shipping_method {
     .stock-shipping-method-title {
       background-color: #CCCCCC;
-      color: #222222;
+      color: $font_color;
       font-size: 10px;
       padding: 5px;
     }
@@ -432,6 +435,9 @@ body.one-col, body.two-col {
   h3.stock-location {
     display: none;
   }
-
+  .cart-item-delete {
+    text-align:right;
+    width:auto;
+  }
 }
 
