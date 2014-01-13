@@ -1,5 +1,5 @@
 $font_color: #222;
-$border_color: '#ccc';
+$border_color: $font_color;
 
 body.one-col, body.two-col {
   border-top-width:0px;
@@ -8,6 +8,11 @@ body.one-col, body.two-col {
   margin:0px 10px;
   line-height:20px;
 
+  h3 {
+    color: $font_color !important;
+    font-size:14px;
+    text-transform: uppercase;
+  }
   #content {
       text-align: left;
   }
@@ -72,7 +77,10 @@ body.one-col, body.two-col {
   }
 
   #wrapper {
-      margin-top: 0px;
+    margin-top: 0px;
+    h3, .search-results-title {
+      border-bottom: solid 1px $border_color;
+    }
   }
 
   #header {
@@ -252,6 +260,17 @@ body.one-col, body.two-col {
       width:auto;
       border: 1px solid #ccc !important;
       box-shadow: 0 2px 4px 0 #CCCCCC;
+    }
+  }
+
+  #product-thumbnails {
+    margin-right:0px;
+    li {
+      margin-right:0px;
+    }
+    li a, li a img {
+      border-radius: 0px;
+    border-color:#ccc;
     }
   }
   #product-description {
@@ -450,7 +469,70 @@ body.one-col, body.two-col {
   }
 
   p {
-    padding: 0px;
+    padding: 3px 0px 0px 0px;
+  }
+
+  fieldset {
+      -moz-border-bottom-colors: none !important;
+      -moz-border-left-colors: none !important;
+      -moz-border-right-colors: none !important;
+      -moz-border-top-colors: none !important;
+      border-color: #DFEEFD -moz-use-text-color -moz-use-text-color !important;
+      border-image: none !important;
+      border-right: medium none !important;
+      border-style: none !important;
+      border-width: 2px medium medium !important;
+  }
+
+
+  #billing legend, #shipping legend, #shipping_method legend, #payment legend, #order_details legend, #order_summary legend
+  {
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    text-align:left !important;
+    margin-left:0px;
+    padding:10px 0px 5px 0px;
+    border-bottom: solid 1px $border_color;
+    width:100%;
+    //float:left;
+  }
+
+  legend:after {
+    content:" ";
+    clear:both;
+    display:block;
+  }
+
+  #checkout-summary {
+    font-size:14px;
+    width:100%;
+
+    h3 {
+      text-align: left;
+    }
+  }
+
+  .dropdown {
+      border-color: #D9D9DB;
+      border-radius: 0px;
+      border-width: 1px;
+    .selected {
+      min-height:11px;
+      padding:5px 3px;
+    }
+  }
+
+  table tbody tr td, table tfoot tr td {
+      padding: 5px 0px;
+      vertical-align: middle;
+  }
+
+  #checkout-summary tr[data-hook="order_total"] td, #summary-order-total, [data-hook="order_details"] [data-hook="order_item_total"] span, #order_total {
+    color:$font_color !important;
+  }
+
+  [data-hook="shipping_fieldset_wrapper"] {
+    display: none;
   }
 }
 
