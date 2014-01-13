@@ -439,5 +439,18 @@ body.one-col, body.two-col {
     text-align:right;
     width:auto;
   }
+
+  [data-hook="empty_cart"] {
+    text-align: center;
+  }
+
+  .button.continue {
+    background-color:$font_color;
+    color:#FFFFFF;
+  }
+
+  p {
+    padding: 0px;
+  }
 }
 
