@@ -54,7 +54,7 @@ body.one-col, body.two-col {
   }
 
   #subheader {
-    display:none;
+    //display:none;
     background:none;
     border-bottom: 0px;
     border-top: 0px;
@@ -334,7 +334,7 @@ body.one-col, body.two-col {
     }
     #product-price .price {
       color: #CC0000;
-      font-size: 14px !important;
+      font-size: 20px !important;
     }
     .add-to-cart {
       float: right;
@@ -581,6 +581,27 @@ body.one-col, body.two-col {
   input[type="submit"], input[type="button"], input[type="reset"], button, a.button {
     background-color:$font_color;
     color:#fff;
+  }
+
+  #subheader .subheader-wrapper {
+    color:$font_color;
+    padding-left:0px;
+  }
+  #breadcrumbs {
+    margin-top:0px;
+    border-bottom:0px;
+    margin-bottom:0px;
+
+    ul li a {
+      color:$font_color;
+    }
+  }
+
+  ul#products li a.info {
+    line-height:60px;
+  }
+  .row {
+      margin-bottom: 0px;
   }
 }
 
