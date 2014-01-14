@@ -21,7 +21,7 @@ body.one-col, body.two-col {
   table#cart-detail {
     margin-left:0px;
   }
-  [data-hook="cart_items_headers"] {
+  [data-hook="cart_items_headers"], [data-hook="cart_adjustments_headers"] {
     background-color:#ccc;
     color:$font_color;
     font-size:10px;
