@@ -601,7 +601,24 @@ body.one-col, body.two-col {
     line-height:60px;
   }
   .row {
-      margin-bottom: 0px;
+    margin-top:10px;
+    margin-bottom: 0px;
+  }
+
+  .page-wrapper footer {
+    display: none;
+  }
+
+  footer {
+    //position:absolute;
+    //bottom: 0px;
+    //border-top:solid 1px #ccc;
+    //width:100%;
+    //left:0px;
+    //background-color:#fff;
+  }
+  h1 {
+    line-height:20px;
   }
 }
 
