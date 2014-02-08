@@ -1,0 +1,41 @@
+- content_for :head do
+  :coffeescript
+    $(document).ready( ->
+      $("#cart-form form").on "ajax:complete", (event, xhr, status) ->
+        $("#checkout_cart").text("Checkout (" + xhr.responseText + ")")
+    )
+
+= form_for :order, :url => populate_orders_path, :remote => true do |f|
+  #inside-product-cart-form{"data-hook" => "inside_product_cart_form", itemprop: "offers", itemscope: "", itemtype: "http://schema.org/Offer"}
+    - if @product.variants_and_option_values(current_currency).any?
+      #product-variants.columns.five.alpha
+        %h6.product-section-title= Spree.t(:variants)
+        %ul
+          - @product.variants_and_option_values(current_currency).each_with_index do |variant, index|
+            %li
+              = radio_button_tag "products[#{@product.id}]", variant.id, index == 0, 'data-price' => display_price(variant)
+              %label{for: ['products', @product.id, variant.id].join('_')}
+                %span.variant-description
+                  = variant_options variant
+                - if variant_price variant
+                  %span.price.diff= variant_price variant
+    - if @product.price_in(current_currency) and !@product.price.nil?
+      .columns.five.if.alpha.else.omega{class: "<haml_silent> !@product.has_variants? </haml_silent><haml_block> </haml_block><haml_silent> </haml_silent><haml_block> </haml_block>", "data-hook" => "product_price"}
+        #product-price
+          %h6.product-section-title= Spree.t(:price)
+          %div
+            %span.price.selling{itemprop: "price"}
+              = display_price(@product)
+            %span{content: @product.currency, itemprop: "priceCurrency"}
+          - if @product.master.in_stock?
+            %link{href: "http://schema.org/InStock", itemprop: "availability"}/
+        .add-to-cart
+          = number_field_tag (@product.variants_and_option_values.any? ? :quantity : "variants[#{@product.master.id}]"), |
+            1, :class => 'title', :min => 1                                                                              |
+          = button_tag :class => 'large primary', :id => 'add-to-cart-button', :type => :submit do
+            = Spree.t(:add_to_cart)
+    - else
+      #product-price
+        %br/
+        %div
+          %span.price.selling{itemprop: "price"}= Spree.t('product_not_available_in_this_currency')

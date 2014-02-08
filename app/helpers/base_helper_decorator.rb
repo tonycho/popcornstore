@@ -7,10 +7,10 @@ module Spree
       css_class = nil
 
       if current_order.nil? or current_order.item_count.zero?
-        text = ""
+        text = "<span id='checkout_cart'></span>".html_safe
         css_class = ''
       else
-        text = "Checkout (#{current_order.item_count})".html_safe
+        text = "<span id='checkout_cart'>Checkout (#{current_order.item_count})</span>".html_safe
         css_class = 'full'
       end
 
