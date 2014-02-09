@@ -434,6 +434,7 @@ body.one-col, body.two-col {
 
   table.stock-contents, table#line-items {
     nargin-top:20px;
+    font-size:10px;
 
     width:100%;
 
@@ -441,6 +442,11 @@ body.one-col, body.two-col {
       background-color: #CCCCCC;
       color: $font_color;
       font-size: 10px;
+    }
+
+    tr td {
+      font-size:12px;
+      font-weight: normal;
     }
   }
 
@@ -452,6 +458,8 @@ body.one-col, body.two-col {
     .stock-shipping-method-title {
       color: $font_color !important;
       font-size:14px;
+      font-weight:bold;
+      padding-top:10px;
       text-transform: uppercase;
       width:100% !important;
       background-color:inherit;
@@ -586,7 +594,7 @@ body.one-col, body.two-col {
   }
 
   #checkout tr td[data-hook="order_item_description"] {
-    display:none;
+    //display:none;
   }
 
   .steps-data .four.columns {
@@ -605,6 +613,9 @@ body.one-col, body.two-col {
   #subheader .subheader-wrapper {
     color:$font_color;
     padding-left:0px;
+    h1[data-hook="checkout_title"] {
+        margin-top: 20px;
+    }
   }
   #breadcrumbs {
     margin-top:0px;
@@ -620,7 +631,7 @@ body.one-col, body.two-col {
     line-height:60px;
   }
   .row {
-    margin-top:10px;
+    margin-top:0px;
     margin-bottom: 0px;
   }
 
@@ -660,6 +671,8 @@ body.one-col, body.two-col {
 
   #link-to-cart {min-width:200px;}
 
+  #checkout_cart {margin-right:5px;}
+
   .item-image {
     img {
       width: 50px;
@@ -671,11 +684,14 @@ body.one-col, body.two-col {
     padding: 5px 0px 0px 0px;
   }
 
-  [data-hook="product_price"] #product-price {
+  #cart-form [data-hook="product_price"] {
+    padding-top: 10px;
+
+    #product-price {
       font-size:18px;
       line-height: 44px;
       margin-right: 0px;
-      padding-top: 0px;
+    }
   }
 
   .checkout_message {
@@ -699,5 +715,46 @@ body.one-col, body.two-col {
   }
 
   .icon-basket {display:none;}
+
+  table.stock-contents tbody tr td {
+      font-size: 12px;
+  }
+
+  .space {display:none;}
+
+  ul {margin-bottom:0px;}
+
+  p[data-hook='card_number'] {
+    height:40px;
+  }
+
+  #credit-card-image {
+    height:30px;
+  }
+
+  .cc-type img {
+    height:15px;
+  }
+
+  #summary-order-charges td:last-child:before, #order-charges td:last-child:before {
+      content: "";
+  }
+  #line-items {
+    tfoot tr td:last-child {
+      padding-right:3px;
+    }
+
+    #order_total {
+      margin-right:3px;
+    }
+  }
+
+  [data-hook="order_details_total"] td {
+      border-width:0px;
+  }
+
+  [data-hook="order_item_qty"] {
+    text-align:right;font-weight:bold;padding-right:13px;
+  }
 }
 
