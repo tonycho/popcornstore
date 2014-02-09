@@ -11,7 +11,8 @@ module Spree
         css_class = ''
       else
         text = "<span id='checkout_cart'>Checkout (#{current_order.item_count})</span>".html_safe
-        css_class = 'full'
+        #css_class = 'full'
+        css_class = ''
       end
 
       link_to text, spree.cart_path, :class => "#{css_class}"
