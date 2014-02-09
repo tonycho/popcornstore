@@ -3,7 +3,15 @@
     $(document).ready( ->
       $("#cart-form form").on "ajax:complete", (event, xhr, status) ->
         $("#checkout_cart").text("Checkout (" + xhr.responseText + ")")
+        $(".checkout_message").slideDown();
+        setTimeout(() ->
+          $(".checkout_message").slideUp();
+        ,3000)
     )
+
+.checkout_message{:style=>"display:none;"}
+  .text
+    Item Added!
 
 = form_for :order, :url => populate_orders_path, :remote => true do |f|
   #inside-product-cart-form{"data-hook" => "inside_product_cart_form", itemprop: "offers", itemscope: "", itemtype: "http://schema.org/Offer"}
