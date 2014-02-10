@@ -169,7 +169,7 @@ body.one-col, body.two-col {
       border-right:solid 1px #ccc;
       border-bottom-width:0px;
       margin:0px;
-      padding:5px;
+      padding:10px 7px;
       text-align:left;
       a {
         font-size:14px !important;
@@ -756,6 +756,10 @@ body.one-col, body.two-col {
 
   [data-hook="order_item_qty"] {
     text-align:right;font-weight:bold;padding-right:13px;
+  }
+
+  variants-buttons ui-buttonset {
+    padding-top:10px;
   }
 }
 
