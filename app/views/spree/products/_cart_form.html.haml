@@ -2,7 +2,7 @@
   :coffeescript
     $(document).ready( ->
       $("#cart-form form").on "ajax:complete", (event, xhr, status) ->
-        $("#checkout_cart").text("Checkout (" + xhr.responseText + ")")
+        $("#checkout_cart").text("Checkout (" + xhr.responseText + ")").effect("highlight", {}, 2000)
         $(".checkout_message").slideDown()
         $("html, body").animate({ scrollTop: 0 }, "slow")
         setTimeout(() ->
