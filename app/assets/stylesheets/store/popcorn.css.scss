@@ -796,7 +796,7 @@ body.one-col, body.two-col {
     width:20px;
     height:20px;
     display:block;
-    background:url('/assets/social.jpg');
+    background-image: image-url("social.jpg");
   }
 
   icon.facebook {
