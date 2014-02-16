@@ -295,6 +295,7 @@ body.one-col, body.two-col {
     font-size: 18px;
     margin-left: 5px;
     padding: 10px 10px;
+    border-radius:8px;
   }
   input[type="button"], input[type="submit"], button, .button, a.button, input[type="number"], input[type="text"], input[type="email"], input[type="password"], input[type="tel"], input[type="search"], textarea {
     border-radius: 0px;
@@ -311,12 +312,15 @@ body.one-col, body.two-col {
       font-size:14px;
     }
     input[type="number"], input[type="text"], input[type="email"], input[type="password"], input[type="tel"], input[type="search"], textarea {
-      width:100%;
+      width:auto;
+      float:right;
       padding:5px 5px;
+      border-radius:8px;
     }
     input[type="button"], input[type="submit"], button, .button, a.button {
       border-radius:8px;
-      width:100%;
+      width:auto;
+      float:right;
       background-color:$font_color;
       color:#FFFFFF;
     }
@@ -404,6 +408,7 @@ body.one-col, body.two-col {
   #update-cart .links button, #update-cart .links input {
       font-size: 11px !important;
       padding: 10px !important;
+    border-radius:8px;
   }
   .gray{
     color:#fff;
@@ -723,7 +728,7 @@ body.one-col, body.two-col {
       text-align:center;
       background-color:#DFF0D8;
       border:solid 1px #38771D;
-      width:250px;
+      width:100%;
       padding:10px;
       margin:auto;
       font-weight:bold;
