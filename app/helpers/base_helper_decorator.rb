@@ -44,7 +44,7 @@ module Spree
    				crumbs << content_tag(:li, link_to(taxon.name , seo_url(taxon)) + sep)
    				crumbs << content_tag(:li, content_tag(:span, product.name))
    			else
-   				crumbs << content_tag(:li, content_tag(:span, taxon.name))
+   				crumbs << content_tag(:li, link_to(taxon.name , seo_url(taxon)))
    			end
    		elsif product
    			crumbs << content_tag(:li, link_to(t('products') , products_path) + sep)

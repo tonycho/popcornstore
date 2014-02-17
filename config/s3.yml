@@ -2,3 +2,8 @@ production:
   bucket: popcornstore
   access_key_id: AKIAISXIDAF2QN4IZEOA
   secret_access_key: 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
+
+development:
+  bucket: popcornstore_dev
+  access_key_id: AKIAISXIDAF2QN4IZEOA
+  secret_access_key: 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

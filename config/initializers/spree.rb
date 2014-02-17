@@ -5,15 +5,19 @@
 #
 # In order to initialize a setting do:
 # config.setting_name = 'new value'
+
+S3_CONFIG = YAML.load_file("#{Rails.root}/config/s3.yml")[Rails.env]
+
 Spree.config do |config|
   # Example:
   # Uncomment to override the default site name.
   # config.site_name = "Spree Demo Site"
   #config.allow_ssl_in_production = false
   config.use_s3 = true
-  config.s3_bucket = 'popcornstore'
-  config.s3_access_key = "AKIAISXIDAF2QN4IZEOA"
-  config.s3_secret = "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"
+  config.s3_bucket = S3_CONFIG['bucket']
+  config.s3_access_key = S3_CONFIG['access_key_id']
+  config.s3_secret = S3_CONFIG['secret_access_key']
+  config.attachment_path = '/spree/products/:id/:style/:basename.:extension'
 end
 
 Spree.user_class = "Spree::User"
