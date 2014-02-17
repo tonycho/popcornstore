@@ -327,7 +327,7 @@ body.one-col, body.two-col {
     }
   }
 
-  #billing, #shipping, #shipping_method, #payment, #order_details, #order_summary {
+  #email, #billing, #shipping, #shipping_method, #payment, #order_details, #order_summary {
     margin-top: 0px;
     padding: 0;
     legend {
@@ -539,7 +539,7 @@ body.one-col, body.two-col {
   }
 
 
-  #billing legend, #shipping legend, #shipping_method legend, #payment legend, #order_details legend, #order_summary legend
+  #email legend, #billing legend, #shipping legend, #shipping_method legend, #payment legend, #order_details legend, #order_summary legend
   {
     font-size: 14px !important;
     font-weight: 600 !important;
